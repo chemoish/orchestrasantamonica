@@ -2,22 +2,50 @@
 layout: default
 ---
 
-<div class="home">
+<div>
+  <h1>Home</h1>
 
-  <h1 class="page-heading">Posts</h1>
+  <img src="" />
 
-  <ul class="post-list">
-    {% for post in site.posts %}
+  <div>
+    <div>
+      <iframe width="100%" height="210" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=soundcloud.com/user-874682015/osm-plays-mendelssohn-symphony-no-3-movement-2"></iframe>
+
+      <p>Many thanks for helping us reach our $10k Fundraiser goal!</p>
+    </div>
+
+    <div>
+      <p>
+        Orchestra Santa Monica is dedicated to building a strong community of classical music lovers of all ages and making a positive impact on the quality of people's lives.
+      </p>
+
+      <p>
+        {% assign donate = site.pages | where: 'slug', 'support-donate' | first %}
+        <a href={{donate.url}}>{{donate.title}}</a>
+      </p>
+
+      <p>
+        {% assign contact = site.pages | where: 'slug', 'contact' | first %}
+        <a href={{contact.url}}>{{contact.title}}</a>
+      </p>
+    </div>
+
+    <ul>
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        "From America to Scotland"
       </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      <li>
+        "A Mozart Celebration"
+      </li>
 
+      <li>
+        "The Flamenco Guitar"
+      </li>
+
+      <li>
+        "From France to Vienna"
+      </li>
+    </ul>
+  </div>
 </div>
