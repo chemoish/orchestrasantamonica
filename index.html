@@ -30,22 +30,9 @@ layout: default
       </p>
     </div>
 
-    <ul>
-      <li>
-        "From America to Scotland"
-      </li>
-
-      <li>
-        "A Mozart Celebration"
-      </li>
-
-      <li>
-        "The Flamenco Guitar"
-      </li>
-
-      <li>
-        "From France to Vienna"
-      </li>
-    </ul>
+    {% assign concerts = site.concerts | sort: 'date' %}
+    {% for concert in concerts %}
+      {% include concert-summary.html %}
+    {% endfor %}
   </div>
 </div>

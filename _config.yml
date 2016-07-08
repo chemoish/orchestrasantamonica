@@ -13,5 +13,8 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+collections:
+  - concerts
+
 # Build settings
 markdown: kramdown

@@ -23,21 +23,8 @@ permalink: /concerts/
     (*)These programs are made possible in part by a grant from the City of Santa Monica and the Santa Monica Arts Commission. Also, Orchestra Santa Monica is supported in part by the Los Angeles County Board of Supervisors through the Los Angeles County Arts Commission.
   </p>
 
-  <ul>
-    <li>
-      "From America to Scotland"
-    </li>
-
-    <li>
-      "A Mozart Celebration"
-    </li>
-
-    <li>
-      "The Flamenco Guitar"
-    </li>
-
-    <li>
-      "From France to Vienna"
-    </li>
-  </ul>
+  {% assign concerts = site.concerts | sort: 'date' %}
+  {% for concert in concerts %}
+    {% include concert.html %}
+  {% endfor %}
 </div>
