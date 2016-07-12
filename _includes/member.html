@@ -1,0 +1,13 @@
+<article class="member">
+  <header class="member-header">
+    <h1 class="member-name">
+      {{ member.name }}
+
+      {% if member.role %}
+        <span class="member-role">{{ member.role }}</span>
+      {% endif %}
+    </h1>
+  </header>
+
+  <div class="member-description">{{ member.content }}</div>
+</article>

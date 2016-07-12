@@ -9,159 +9,18 @@ permalink: /about/orchestra/
 <div>
   <h1>Meet the Orchestra</h1>
 
-  <div>
-    <h2>Michael Emery, Concertmaster</h2>
+  {% assign members = site.members | where: 'weight', 1 | sort: 'name' %}
+  {% for member in members %}
+    {% include member.html %}
+  {% endfor %}
 
-    <p>
-      Hailed by the late violinist Henryk Szeryng as "a joy to hear" and by pianist André-Michel Schub as "the chamber coach of the year", Orchestra Santa Monica Concertmaster Michael Emery blends performance in the United States and Europe with his faculty position at Skidmore College in New York, creating an active bi-coastal and international musical career.
-    </p>
+  {% assign members = site.members | where: 'weight', 2 | sort: 'name' %}
+  {% for member in members %}
+    {% include member.html %}
+  {% endfor %}
 
-    <p>
-      In addition to Orchestra Santa Monica, Mr. Emery is Concertmaster and a frequent soloist with the Catskill, Schenectady, and Glens Falls Symphonies in upstate New York. Mr. Emery has performed as soloist and concertmaster in several major European cities in summer concert tours with the Santa Monica Chamber Philharmonia. In recent summers, Mr. Emery has performed with and directed the Varna International Chamber Orchestra at the Spoleto International Music Festival in Italy, and was soloist in the Mozart Symphonia Concertante in Budapest, Bratislava and Prague.
-    </p>
-
-    <p>
-      Mr. Emery is on faculty and a performing artist with the Luzerne Music Festival, and was invited to teach at the Mahler Conservatory of Music in Vienna this past summer.
-    </p>
-
-    <p>
-      As Senior Artist-in-Residence at Skidmore College, Mr. Emery directs the expanding string department, working with talented students on solo, chamber music, and orchestral repertoire. Through the annual Skidmore String Festival, which he created in 2005, Mr. Emery has collaborated with several highly acclaimed guest artists such as the Brentano, Manhattan, American, and Ying Quartets.
-    </p>
-  </div>
-
-  <div>
-    <h2>Carrie Holzman-Little, Principal Viola</h2>
-
-    <p>
-    	For the past 20 years, Carrie Holzman-Little (viola) has been a busy free-lance musician here in Southern California.  She has been fortunate to study with many illustrious music teachers such as William Primrose, Hechiiro Ohyama, Ron Copes, and Louis Kievman. Carrie was chosen to attend Tanglewood Music Festival under the baton of Leonard Bernstein, the Blossom Music Festival under the umbrella of the Cleveland Orchestra and The Music Academy of the West under the direction of conductor Maurice Abravanel.
-    </p>
-
-    <p>
-    	Presently she attends the Oregon Bach Festival and has been a coach and performer at the Gold Coast Chamber Music Festival for the past 3 years.  Carrie has been the Assistant Principal violist of the Pasadena Symphony for 15 years and is a member of the Hollywood Bowl Orchestra. Other musical activities include being a member of the Crown City String Quartet, playing on sound tracks for movies and television, and teaching viola. Carrie lives in a 100 year old house in Pasadena with her cellist husband, Dane Little, two teenagers and five large male cats.  In her spare time, she enjoys the rigor and excitement of competing in triathlons.
-    </p>
-  </div>
-
-  <div>
-    <h2>Christina Soule, Principal Cello</h2>
-
-    <p>
-    	OSM Principal Cellist Christina Soule has served since 1984 as Principal Cello with the San Luis Obispo Mozart Festival, where she has performed as soloist under Christopher Hogwood, and collaborated in chamber concerts with many of the world's most sought-after musicians. Christina previously held positions as Principal Cellist with the Orange County Chamber Orchestra and the Boston Ballet, and as Assistant Principal with the Joffrey Ballet. She has also appeared with the Los Angeles Philharmonic, the Hollywood Bowl Orchestra and as Principal Cello with the Los Angeles Mozart Orchestra. 
-    </p>
-
-    <p>
-    	Her non-orchestral projects have ranged from touring and recording with Barbra Streisand, recording with Frank Sinatra, John Denver, Michael Jackson, and countless other artists, to performing on Southwest Chamber Music's 2004 Grammy Award Winning Album "The Complete Chamber Works of Carlos Chavez vol. 2". 
-    </p>
-
-    <p>
-    	In her free-lance career, Ms. Soule has played on the scores of hundreds of films such as "Spiderman", "Pirates of the Caribbean", "Toy Story", and "Finding Nemo", for well-known film composers including Danny Elfman, Randy Newman, John Williams and Hans Zimmer. 
-    </p>
-
-    <p>
-    	As a chamber musician, she has recently appeared on the acclaimed Jacaranda Series, the Beverly Hills Chamber Music Festival, and the Musical Sunday Afternoons Series. She is also co- founder of the Pasadena Schubertiade Music Festival. Ms. Soule currently resides in Altadena amongst a cherished community of artists and musicians. In her spare time, she enjoys gardening, biking, and hiking the local mountains. 
-    </p>
-  </div>
-
-  <div>
-    <h2>David Shostac, Principal Flute</h2>
-
-    <p>
-    	“Extraordinary, dazzling, world class” and “a musician of the highest order” are words critics have used to describe the artistry of David Shostac. Principal Flute with the Los Angeles Chamber Orchestra since 1975 and Principal Flute of Orchestra Santa Monica, Dave has performed as a solo and orchestral player at the Hollywood Bowl and has taken part in the Ojai, Mostly Mozart, Aspen and Oregon Bach festivals. Recent solo appearances with the Los Angeles Chamber Orchestra include the premiere of his Carmen Fantasy for flute and orchestra in 2009.
-    </p>
-
-    <p>
-    	Dave’s most recent recording, Vivaldi Flute Concertos with the Song of the Angels Flute Orchestra, features several of his original arrangements, accompanied by a unique orchestra consisting entirely of flutes of all sizes, including bass, contrabass and double contrabass flutes. Other recordings include Chamber Music Classics for Flute JS Bach: The Six Flute Sonatas, and The Romantic Flute.
-    </p>
-
-    <p>
-    	Dave is active in the motion picture recording industry and can be heard on hundreds of motion picture soundtracks. His expanding list of credits includes Avatar, The Karate Kid and many others. He has taught at USC, UCLA, the California Institute of the Arts, the Aspen Music School and the Idyllwild Arts Academy. He is currently a faculty member of CSU Northridge.
-    </p>
-
-    <p>
-    	Dave enjoys spending time with his granddaughter Sierra, puppies Snookie (Malti-Shihtzu) and Frankie (Cavi-poo) and cat Minnie. He performs at occasional jazz, Latin and country gigs.
-    </p>
-  </div>
-
-  <div>
-    <h2>Catherine Del Russo, Principal Oboe</h2>
-
-    <p>
-    	Catherine Del Russo is an active player with many orchestras in Southern California, including positions with the Hollywood Bowl Orchestra (where she is the solo Engish Horn player), the Santa Barbara Symphony, the Santa Barbara Chamber Orchestra, Long Beach Symphony, Los Angeles Mozart Orchestra, and the San Diego Chamber Orchestra. Starting with an Eastman Wind Ensemble tour to Japan and the Far East, she has performed around the world. She has played with the Buffalo Philharmonic, Filarmonica de Caracas and Orquesta Municipal de Caracas, Venezuela. In addition to her position with OSM, she is the Principal Oboist of the Downey Symphony and the Symphony in the Glen. She has done studio work in Los Angeles playing in movies, television shows and commercials and teaches at Pepperdine University in Malibu and Occidental College in Los Angeles. Catherine received her Bachelor of Music Degree and her Performance Certificate from the Eastman School of Music, and her Masters of Music Degree from Ohio University while studying with the legendary John Mack.
-    </p>
-  </div>
-
-  <div>
-    <h2>Gary Bovyer, Principal Clarinet</h2>
-
-    <p>
-    	In addition to his position as OSM Principal Clarinet, Gary Bovyer is principal of the Long Beach Symphony, the Hollywood Bowl Orchestra, and the Los Angeles Master Chorale Sinfonia. As Mark Swed wrote in the Los Angeles Times of his playing; "...the clarinet, exquisitely played by Gary Bovyer, reached such a degree of quiet tenderness that the ending felt more like a mystical breeze lightly touching the skin than sound waves striking the ear." The Long Beach Gazette said of his 2006 performance with the Long Beach Symphony, ” Quiet perfection marked the Mozart (Basset) Clarinet Concerto as performed by Gary Bovyer…the perfection came from the balance, the musicality, the just-right tempos and the sense of total authority. Bovyer was poised, his sound creamy and luscious…what came through was fabulous Mozart, in all its glory.”
-    </p>
-
-    <p>
-    	An active clarinetist in the Los Angeles recording studios for over 25 years, Gary can be heard as principal clarinetist on several of the motion picture scores of James Horner, Danny Elfman, David Newman and George Clinton.
-    </p>
-
-    <p>
-    	Recently Gary recorded Steve Reich's "The Daniel Variations" on Nonesuch and is also featured in James Newton's "Sacred Music" on New World Records. He is the co-director of the Long Beach Symphony's chamber music and architecture series, "Sounds & Spaces" and is on the faculty at Pomona College, Claremont.
-    </p>
-  </div>
-
-  <div>
-    <h2>Dave Riddles, Principal Bassoon</h2>
-
-    <p>
-    	Free-lance studio musician Dave Riddles (first bassoon) has worked in L.A. for 35 years, played on over 700 film scores, numerous TV shows, and played 18 seasons with the Pacific Symphony as first bassoon. He also played for several seasons with the Joffrey Ballet Orchestra and the American Ballet Orchestra, and substituted with the L.A. Philharmonic in the early 80′s. Dave received his Bachelors of Music at University of the Pacific, and Masters of Music in Bassoon performance from Indiana University, Bloomington.
-    </p>
-
-    <p>
-    	An artist of another variety, Dave is the author of a book of cartoons drawn on studio calls titled “Tacet Art” which describes life in the music studio world through cartoons. Hobbies include riding his Harley Davidson Motorcycle and playing Celtic music on the Uilleann Pipes, the Irish Flute and Whistle.
-    </p>
-  </div>
-
-  <div>
-    <h2>Marissa Benedict, Principal Trumpet</h2>
-
-    <p>
-    	Marissa Benedict has been a freelance musician in the Los Angeles area for 33 years.  She is principal trumpet with The Pasadena Symphony, Pasadena Pops Orchestra, and associate principal trumpet with The Long Beach Symphony.  She plays with other Los Angeles groups such as The Los Angeles Opera, Hollywood Bowl Orchestra, Santa Barbara Chamber Orchestra and The Long Beach Municipal Band.  She can be heard on nearly 125 motion picture recordings and to name a few; Indiana Jones IV, Avatar, Sucker Punch, War of the Worlds and The Terminal. She also can be seen and heard playing shows at the Ahmanson Theater.  While staying busy with her music career she and her husband Mike just celebrated their 26th wedding anniversary and have raised three children. 
-    </p>
-  </div>
-
-  <div>
-    <h2>Samuel Fischer</h2>
-
-    <p>
-    	Samuel Fischer (violin) has performed as a soloist throughout the United States, Europe, and Japan and solos regularly in the Los Angeles area. He is concertmaster of the Riverside County Philharmonic and performs in numerous orchestras within Southern California including the Los Angeles Chamber Orchestra, the Los Angeles Opera Orchestra, the Pacific Symphony, the Pasadena Symphony, and the Santa Barbara Chamber Orchestra. He has recorded extensively for motion picture soundtracks, record albums, and video game soundtracks by many of Hollywood’s top composers and artists. A passionate educator, Mr. Fisher is on the faculty of the Colburn School of Performing Arts, the Idyllwild Arts Summer Program, the Montecito International Music Festival, the Young Musicians Foundation Chamber Music Series, and Junior Chamber Music. Mr. Fischer holds a Bachelor of Music degree from the University of Southern California and a Masters degree from the Julliard School. His principal teachers include Robert Lipsett, Emanuel Borok, Dorothy DeLay, and Masao Kawasaki. 
-    </p>
-  </div>
-
-  <div>
-    <h2>Emily Reppun</h2>
-
-    <p>
-    	Originally from Bellingham, WA, Emily Reppun (French horn) received her degree from the Chicago College of Performing Arts at Roosevelt University where she studied with Chicago Symphony hornists Dale Clevenger and Alice Render.
-    </p>
-
-    <p>
-    	Since moving to Los Angeles, Emily has held the position of 2nd horn with the Golden State Pops Orchestra, which specializes in live performances of film scores. She has also performed with the Fresno Philharmonic, Long Beach Municipal Band, San Bernardino Symphony, West L.A. Symphony, American Youth Symphony, Orquesta de Baja California, Torrance Symphony, San Diego Opera Ensemble, Center Stage Opera, Pacific Brass Ensemble, Musical Theater West, Kim Richmond Concert Jazz Orchestra, Bruce Lofgren Jazz Orchestra, Elvis Schoenberg’s Orchestre Surréal, Video Games Live, Rickey Minor, Christina Aguilera, Rihanna and Kanye West. 
-    </p>
-  </div>
-
-  <div>
-    <h2>Julia Tranner</h2>
-
-    <p>
-    	Julia Tranner (violin) is a founding member of Orchestra Santa Monica.  A longtime employee of the  J. Paul Getty Museum and Trust, Julia is presently Deputy to the President and Manager of Board Relations.  Julia’s musical education began in Washington, D.C. where she studied piano and choral music. She took up the violin in the San Francisco Bay area where she played in the California Youth Symphony and the Peninsula Symphony under violinist-conductor Aaron Sten. While with the California Youth Symphony Julia performed at the San Francisco Opera House, was broadcast on KCBS radio, and took a 16- day concert tour of Mexico that included a performance for over 10,000 people in Guadalajara. In Los Angeles she has performed in various chamber groups and previously played with the Santa Monica Symphony.  Julia has performed as a piano accompanist, and has collaborated with singer-songwriters in performances at venues in the Bay Area and in Los Angeles. 
-    </p>
-  </div>
-
-  <div>
-    <h2>Raymond Knapp</h2>
-
-    <p>
-    	Professor Raymond Knapp (violin) has taught in the Department of Musicology at UCLA since 1989 and is a member of OSM’s second violin section. Knapp plays the violin both for the joy of it and as a “reality check” for his teaching and research. He has authored four books, including Symphonic Metamorphoses: Subjectivity and Alienation in Mahler’s Re-Cycled Songs and the award-winning The American Musical and the Formation of National Identity andhas co-edited two others. His published essays address a wide range of additional interests, including Beethoven, Wagner, Brahms, Tchaikovsky, nationalism, musical allusion, music and identity, and film music. To our delight, OSM musicians and concert-goers are treated to Knapp’s colorful and insightful program notes each concert.
-    </p>
-
-    <p>
-    	Knapp gained his early playing experience in his home-town and university orchestras (Grand Forks, North Dakota and Harvard, respectively), then was a longtime player for the Santa Monica Symphony before joining Orchestra Santa Monica. On the side, he has become an avid biker, trailing after his even more avid biker spouse. Together they have participated (along with several thousand others) in Levi’s Granfondo in Sonoma County. 
-    </p>
-  </div>
+  {% assign members = site.members | where: 'weight', 3 | sort: 'name' %}
+  {% for member in members %}
+    {% include member.html %}
+  {% endfor %}
 </div>
