@@ -1,0 +1,61 @@
+.navbar-menu
+{
+  background-color: #202020;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu-item
+{
+  display: inline-block;
+  position: relative;
+
+  &:hover > a
+  {
+    background-color: #888;
+  }
+
+  > a
+  {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px 15px;
+    text-transform: uppercase;
+
+    &:hover
+    {
+      background-color: #888;
+    }
+  }
+}
+
+.navbar-submenu
+{
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 100;
+
+  .navbar-menu-item:hover &
+  {
+    display: block;
+  }
+}
+
+.navbar-submenu-item
+{
+  & > a
+  {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover
+    {
+      background-color: #888;
+    }
+  }
+}

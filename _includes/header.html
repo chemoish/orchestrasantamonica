@@ -1,58 +1,54 @@
 <header>
   <a href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-  <nav>
-    <ul>
-      <li>
+  <nav class="navbar">
+    <ul class="navbar-menu">
+      <li class="navbar-menu-item">
         <a href="{{ site.baseurl }}/">Home</a>
       </li>
 
-      <li>
+      <li class="navbar-menu-item">
         {% assign concert = site.pages | where: 'slug', 'concert' | first %}
         <a href="{{ concert.url | prepend: site.baseurl }}">{{ concert.title }}</a>
       </li>
 
-      <li>
+      <li class="navbar-menu-item">
         {% assign ticket = site.pages | where: 'slug', 'ticket' | first %}
         <a href="{{ ticket.url | prepend: site.baseurl }}">{{ ticket.title }}</a>
       </li>
 
-      <li>
-        <a>
-          About OSM
+      <li class="navbar-menu-item">
+        <a>About OSM</a>
 
-          <ul>
-            {% assign pages = site.pages | where: 'group', 'about' | sort: 'group-weight' %}
-            {% for page in pages %}
-              <li>
-                <a href="{{ page.url | prepend: site.baseurl}}">{{ page.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </a>
+        <ul class="navbar-menu navbar-submenu">
+          {% assign pages = site.pages | where: 'group', 'about' | sort: 'group-weight' %}
+          {% for page in pages %}
+            <li class="navbar-submenu-item">
+              <a href="{{ page.url | prepend: site.baseurl}}">{{ page.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </li>
 
-      <li>
-        <a>
-          Support OSM
+      <li class="navbar-menu-item">
+        <a>Support OSM</a>
 
-          <ul>
-            {% assign pages = site.pages | where: 'group', 'support' | sort: 'group-weight' %}
-            {% for page in pages %}
-              <li>
-                <a href="{{ page.url | prepend: site.baseurl}}">{{ page.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </a>
+        <ul class="navbar-menu navbar-submenu">
+          {% assign pages = site.pages | where: 'group', 'support' | sort: 'group-weight' %}
+          {% for page in pages %}
+            <li class="navbar-submenu-item">
+              <a href="{{ page.url | prepend: site.baseurl}}">{{ page.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </li>
 
-      <li>
+      <li class="navbar-menu-item">
         {% assign outreach = site.pages | where: 'slug', 'outreach' | first %}
         <a href="{{ outreach.url | prepend: site.baseurl }}">{{ outreach.title }}</a>
       </li>
 
-      <li>
+      <li class="navbar-menu-item">
         {% assign contact = site.pages | where: 'slug', 'contact' | first %}
         <a href="{{ contact.url | prepend: site.baseurl }}">{{ contact.title }}</a>
       </li>
