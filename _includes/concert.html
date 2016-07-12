@@ -8,9 +8,9 @@
   </header>
 
   <div class="concert-content">
-    {% for description in concert.descriptions %}
-      <p class="concert-description">{{ description }}</p>
-    {% endfor %}
+    <div class="concert-description">
+      {{ concert.content }}
+    </div>
 
     <p class="concert-feature">{{ concert.feature }}</p>
 
