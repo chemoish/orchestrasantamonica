@@ -1,6 +1,6 @@
 $body-font-family: 'Montserrat', sans-serif;
 
-@import 'util/util';
-@import 'global';
+@import '../node_modules/foundation-sites/scss/util/util';
+@import '../node_modules/foundation-sites/scss/global';
 
 @include foundation-global-styles;
