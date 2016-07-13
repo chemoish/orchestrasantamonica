@@ -1,0 +1,22 @@
+{
+  "name": "orchestrasantamonica",
+  "version": "0.0.0",
+  "description": "https://jekyllrb.com/docs/quickstart/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chemoish/orchestrasantamonica.git"
+  },
+  "author": "Carey Hinoki <carey.hinoki@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chemoish/orchestrasantamonica/issues"
+  },
+  "homepage": "https://github.com/chemoish/orchestrasantamonica",
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}

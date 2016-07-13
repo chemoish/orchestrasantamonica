@@ -17,5 +17,10 @@ collections:
   - concerts
   - members
 
+sass:
+  load_paths:
+    - _sass
+    - node_modules/foundation-sites/scss
+
 # Build settings
 markdown: kramdown
