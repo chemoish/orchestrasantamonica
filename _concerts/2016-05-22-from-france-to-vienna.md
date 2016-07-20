@@ -1,7 +1,6 @@
 ---
 title: From France to Vienna
 date: 2016-05-22 14:30:00 -0700
-published: false
 feature: Steven Vanhauwaert, piano
 location: location-moss-theater
 musics:
