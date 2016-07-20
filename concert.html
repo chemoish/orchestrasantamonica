@@ -9,7 +9,7 @@ permalink: /concerts/
   <h1>OSM Concerts for 2016-17</h1>
 
   <p>
-    Experience OSM concerts in the iniimacy of superb acoustics of the Ann and Jerry Moss Theater. We hope you will enjoy the wonderful ambience, comfort, and viewing perspectives of this new 344-seat state-of-the-art venue. For directions and additonal information on the hall, please visit <a href="http://www.mosstheater.com/" target="_blank">Moss Theater</a>.
+    Experience OSM concerts in the initimacy of superb acoustics of the Ann and Jerry Moss Theater. We hope you will enjoy the wonderful ambience, comfort, and viewing perspectives of this new 344-seat state-of-the-art venue. For directions and additonal information on the hall, please visit <a href="http://www.mosstheater.com/" target="_blank">Moss Theater</a>.
   </p>
 
   {% include location-moss-theater.html %}
@@ -27,7 +27,7 @@ permalink: /concerts/
   {% for concert in concerts %}
     {% assign concertTimestamp = concert.date | date: '%s' %}
 
-    {% if concertTimestamp > timestamp %}
+    {% if concertTimestamp >= timestamp %}
       {% include concert.html %}
     {% endif %}
   {% endfor %}
