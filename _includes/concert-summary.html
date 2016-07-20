@@ -8,7 +8,9 @@
   </header>
 
   <div class="concert-content">
-    <p class="concert-feature">{{ concert.feature }}</p>
+    {% if concert.feature %}
+      <p class="concert-feature">{{ concert.feature }}</p>
+    {% endif %}
 
     <ol class="concert-music-list">
       {% for music in concert.musics %}
@@ -16,9 +18,9 @@
       {% endfor %}
     </ol>
 
-    <hr />
-
     {% if concert.location %}
+      <hr />
+      
       {% include {{ concert.location | append: '.html' }} %}
     {% endif %}
   </div>

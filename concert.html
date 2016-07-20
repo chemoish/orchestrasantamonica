@@ -6,25 +6,37 @@ permalink: /concerts/
 ---
 
 <div>
-  <h1>Concerts</h1>
-
-  <h2>Concerts for the 2015-16 season</h2>
-  <h3>Welcome to OSM!</h3>
+  <h1>OSM Concerts for 2016-17</h1>
 
   <p>
-    Concerts take on a new dimension when you're close to the action. For our 2015-2016 season, OSM will be performing all our concerts(*) in the intimacy and superb acoustics of the Ann and Jerry Moss Theater located in The Herb Alpert Educational Village at New Roads School. We hope you will enjoy the wonderful ambience, comfort, and viewing perspectives of this new 344-seat state-of-the-art venue. With acoustics designed by Yasuhisa Toyota (acoustician for Disney Hall), your live musical experience will be especially enhanced. For more information visit <a href="http://www.mosstheater.com/" target="_blank">Moss Theater</a>.
+    Experience OSM concerts in the iniimacy of superb acoustics of the Ann and Jerry Moss Theater. We hope you will enjoy the wonderful ambience, comfort, and viewing perspectives of this new 344-seat state-of-the-art venue. For directions and additonal information on the hall, please visit <a href="http://www.mosstheater.com/" target="_blank">Moss Theater</a>.
+  </p>
+
+  {% include location-moss-theater.html %}
+
+  <p>
+    <b>Parking</b>: Free on-site and near-by street parking
   </p>
 
   <p>
-    Futhermore, OSM concerts at the Moss come with free and convenient on-site and near-by street parking … a real bonus in our area! And for those of you interested in taking advantage of the Expo line extension opening on May 20, 2016, the Bergamot Station light rail stop at 26th/Olympic is just a short 10 minute walk to the Moss Theater. For more information visit <a href="http://moreexpo.metro.net/" target="_blank">http://moreexpo.metro.net/</a>
+    <b>Expo Line</b>: Bergamot Station stop at 26th/Olympic (short 10 minute walk)
   </p>
 
-  <p>
-    (*)These programs are made possible in part by a grant from the City of Santa Monica and the Santa Monica Arts Commission. Also, Orchestra Santa Monica is supported in part by the Los Angeles County Board of Supervisors through the Los Angeles County Arts Commission.
-  </p>
-
+  {% assign timestamp = site.time | date: '%s' %}
   {% assign concerts = site.concerts | sort: 'date' %}
   {% for concert in concerts %}
-    {% include concert.html %}
+    {% assign concertTimestamp = concert.date | date: '%s' %}
+
+    {% if concertTimestamp > timestamp %}
+      {% include concert.html %}
+    {% endif %}
   {% endfor %}
+
+  <p>
+    These programs are made possible in part by a grant from the City of Santa Monica and the Santa Monica Arts Commission. Also, Orchestra Santa monica is uspported in part by the Los Angeles County Board of Supervisors through the Los Angeles County Arts Commission.
+  </p>
+
+  <p>
+    New Roads School is a diverse and cohesive educational community, reflective of the kaleidoscope of cultures, ethnicities, beliefs, and orientations that make our larger Los Angeles community so vibrant. We believe that a meaningful 21st century education must include a diverse cohort as well as intergration with the larger community in order to prepare students for conscientious participatory lives and not merely to ready theme for college.
+  </p>
 </div>

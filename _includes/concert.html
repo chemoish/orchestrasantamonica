@@ -8,22 +8,20 @@
   </header>
 
   <div class="concert-content">
-    <div class="concert-description">
-      {{ concert.content }}
-    </div>
+    {% if concert.description %}
+      <div class="concert-description">
+        {{ concert.content }}
+      </div>
+    {% endif %}
 
-    <p class="concert-feature">{{ concert.feature }}</p>
+    {% if concert.feature %}
+      <p class="concert-feature">{{ concert.feature }}</p>
+    {% endif %}
 
     <ol class="concert-music-list">
       {% for music in concert.musics %}
         <li class="concert-music-item">{{ music }}</li>
       {% endfor %}
     </ol>
-
-    <hr />
-
-    {% if concert.location %}
-      {% include {{ concert.location | append: '.html' }} %}
-    {% endif %}
   </div>
 </article>
