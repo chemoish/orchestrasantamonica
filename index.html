@@ -3,36 +3,33 @@ layout: default
 ---
 
 <div>
-  <h1>Home</h1>
-
-  <img src="" />
+  <h1>Welcome to OSM!</h1>
 
   <div>
-    <div>
-      <iframe width="100%" height="210" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=soundcloud.com/user-874682015/osm-plays-mendelssohn-symphony-no-3-movement-2"></iframe>
+    <p>
+      Orchestra Santa Monica (OSM) is happy to be celebrating its 5-year anniversary this season and thanks you for your wonderful support! We're excited to be presenting wonderful programming in 2016-17 and look forward to seeing you at our opening concert in October. For a complete list of this season's concert programs, please see our "Concerts" page and be sure to mark these dates on your calendar.
+    </p>
 
-      <p>Many thanks for helping us reach our $10k Fundraiser goal!</p>
-    </div>
-
-    <div>
-      <p>
-        Orchestra Santa Monica is dedicated to building a strong community of classical music lovers of all ages and making a positive impact on the quality of people's lives.
-      </p>
-
-      <p>
-        {% assign donate = site.pages | where: 'slug', 'support-donate' | first %}
-        <a href={{donate.url}}>{{donate.title}}</a>
-      </p>
-
-      <p>
-        {% assign contact = site.pages | where: 'slug', 'contact' | first %}
-        <a href={{contact.url}}>{{contact.title}}</a>
-      </p>
-    </div>
-
+    {% assign timestamp = site.time | date: '%s' %}
     {% assign concerts = site.concerts | sort: 'date' %}
     {% for concert in concerts %}
-      {% include concert-summary.html %}
+      {% assign concertTimestamp = concert.date | date: '%s' %}
+
+      {% if concertTimestamp > timestamp %}
+        {% include concert.html %}
+
+        {% break %}
+      {% endif %}
     {% endfor %}
+
+    <div>
+      <p>Hear OSM playing the lively vivace movement from Mendelssohn's Scottish Symphony.</p>
+
+      <iframe width="100%" height="210" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=soundcloud.com/user-874682015/osm-plays-mendelssohn-symphony-no-3-movement-2"></iframe>
+    </div>
+
+    <p>
+      <i>Orchestra Santa Monica is dedicated to building a strong community of classical music lovers of all ages and making a positive impact on the quality of people's lives.</i>
+    </p>
   </div>
 </div>
