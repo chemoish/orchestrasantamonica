@@ -15,7 +15,7 @@ layout: default
     {% for concert in concerts %}
       {% assign concertTimestamp = concert.date | date: '%s' %}
 
-      {% if concertTimestamp > timestamp %}
+      {% if concertTimestamp >= timestamp %}
         {% include concert.html %}
 
         {% break %}
