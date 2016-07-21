@@ -16,6 +16,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 collections:
   - concerts
   - members
+timezone: America/Los_Angeles
 
 # Build settings
 markdown: kramdown

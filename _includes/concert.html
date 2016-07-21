@@ -3,7 +3,7 @@
     <h1 class="concert-title">
       {{ concert.title }}
 
-      <span class="concert-date">{{ concert.date | date: '%B %-d, %Y %l:%M %p' }}</span>
+      <span class="concert-date">{{ concert.date | date: '%A, %B %-d, %Y @ %l:%M %p' }}</span>
     </h1>
   </header>
 
@@ -23,5 +23,11 @@
         <li class="concert-music-item">{{ music }}</li>
       {% endfor %}
     </ol>
+
+    {% if concert.location %}
+      <hr />
+
+      {% include {{ concert.location | append: '.html' }} %}
+    {% endif %}
   </div>
 </article>
