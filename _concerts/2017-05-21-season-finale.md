@@ -5,7 +5,7 @@ feature: Damian Montano, composer and bassoonist
 location: location-moss-theater
 musics:
   - >-
-    Rossini: overture to The Italian girl in Algiers
+    Rossini: Overture to The Italian girl in Algiers
   - >-
     Montano: Three Night Pieces, concerto for bassoon
   - >-
