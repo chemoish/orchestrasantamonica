@@ -23,5 +23,11 @@
         <li class="concert-music-item">{{ music }}</li>
       {% endfor %}
     </ol>
+
+    {% if concert.location %}
+      <hr />
+
+      {% include {{ concert.location | append: '.html' }} %}
+    {% endif %}
   </div>
 </article>

@@ -28,7 +28,7 @@ permalink: /concerts/
     {% assign concertTimestamp = concert.date | date: '%s' %}
 
     {% if concertTimestamp >= timestamp %}
-      {% include concert.html %}
+      {% include concert-summary.html %}
     {% endif %}
   {% endfor %}
 
